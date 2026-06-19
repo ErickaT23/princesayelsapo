@@ -82,7 +82,7 @@
             window.config
             && window.config.event
             && window.config.event.defaultEventId
-            || "misxv-anika-fernanda-2026"
+            || "misxv-maria-emilia-2026"
         ).trim();
 
         return queryEventId || defaultEventId;

@@ -22,7 +22,7 @@ const externalConfig = window.config || {};
 function resolveEventId() {
     const eventConfig = externalConfig.event || {};
     const eventIdParam = String(eventConfig.eventIdParam || 'eventId').trim() || 'eventId';
-    const defaultEventId = String(eventConfig.defaultEventId || 'misxv-anika-fernanda-2026').trim() || 'misxv-anika-fernanda-2026';
+    const defaultEventId = String(eventConfig.defaultEventId || 'misxv-maria-emilia-2026').trim() || 'misxv-maria-emilia-2026';
     const params = new URLSearchParams(window.location.search || '');
     const paramValue = String(params.get(eventIdParam) || '').trim();
     const eventId = paramValue || defaultEventId;
@@ -74,16 +74,16 @@ function createSiteConfig(remoteConfig) {
 
     return {
         seo: {
-            titulo: 'Anika Fernanda | Mis XV 2026',
-            descripcion: 'Mis Quince Años de Anika Fernanda - 12 de diciembre, 2026',
+            titulo: 'María Emilia | Mis XV 2026',
+            descripcion: 'Mis Quince Años de María Emilia — Sábado 21 de Noviembre, 2026',
             autor: 'Two Design',
             ...externalConfig.seo,
             ...normalizedRemoteConfig.seo
         },
         pareja: {
-            nombres: 'Anika Fernanda',
-            fecha: '12-12-2026',
-            fechaVisible: '12.12.2026',
+            nombres: 'María Emilia',
+            fecha: '21-11-2026',
+            fechaVisible: '21 · Noviembre · 2026',
             ...externalConfig.pareja,
             ...normalizedRemoteConfig.pareja
         },
@@ -120,7 +120,7 @@ function createSiteConfig(remoteConfig) {
             ...normalizedRemoteConfig.textos
         },
         footer: {
-            hashtag: '#MisXVAnikaFernanda',
+            hashtag: '#MisXVMariaEmilia',
             instagramUrl: 'https://instagram.com/rocio.fernando.boda',
             facebookUrl: 'https://facebook.com/rociofernandoboda',
             marcaTexto: 'Diseño',
@@ -177,6 +177,11 @@ function applySiteConfig() {
     const portadaNames = document.querySelectorAll('.portada-nombres .nombre');
     if (portadaNames[0]) setStyledWord(portadaNames[0], left);
     if (portadaNames[1]) setStyledWord(portadaNames[1], right);
+
+    const portadaMainName = document.querySelector('.portada-main-name');
+    if (portadaMainName && SiteConfig.pareja.nombres) {
+        portadaMainName.textContent = SiteConfig.pareja.nombres.replace(/\s*&\s*/g, ' ');
+    }
 
     const heroNames = document.querySelectorAll('.hero-invitado-nombres .nombre');
     if (heroNames[0]) setStyledWord(heroNames[0], left);
@@ -384,13 +389,98 @@ const InvitadoApp = {
     }
 };
 
+function randomBetween(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+function initPortadaParticles() {
+    const portada = document.getElementById('portada');
+    if (!portada || portada.dataset.ambientReady === 'true') return;
+
+    portada.dataset.ambientReady = 'true';
+
+    for (let i = 0; i < 10; i += 1) {
+        const particle = document.createElement('span');
+        const size = randomBetween(2, 6);
+
+        particle.className = 'portada-ambient-particle';
+        particle.style.width = size + 'px';
+        particle.style.height = size + 'px';
+        particle.style.left = randomBetween(4, 96) + '%';
+        particle.style.top = randomBetween(58, 98) + '%';
+        particle.style.setProperty('--duration', randomBetween(6.5, 11) + 's');
+        particle.style.setProperty('--delay', randomBetween(-9, 0) + 's');
+        particle.style.setProperty('--drift', randomBetween(-34, 34) + 'px');
+        portada.appendChild(particle);
+    }
+}
+
+function createOpeningParticle(className, options) {
+    const particle = document.createElement('span');
+    const size = randomBetween(options.minSize, options.maxSize);
+
+    particle.className = className;
+    particle.style.setProperty('--x', randomBetween(42, 58) + '%');
+    particle.style.setProperty('--y', randomBetween(42, 55) + '%');
+    particle.style.setProperty('--size', size + 'px');
+    particle.style.setProperty('--tx', randomBetween(options.minX, options.maxX) + 'px');
+    particle.style.setProperty('--ty', randomBetween(options.minY, options.maxY) + 'px');
+    particle.style.setProperty('--duration', randomBetween(options.minDuration, options.maxDuration) + 's');
+    particle.style.setProperty('--delay', randomBetween(options.minDelay, options.maxDelay) + 's');
+
+    return particle;
+}
+
+function openEnvelope() {
+    const portada = document.getElementById('portada');
+    const btnAbrir = document.getElementById('btn-abrir');
+
+    if (!portada || !btnAbrir || portada.dataset.opening === 'true') return;
+
+    portada.dataset.opening = 'true';
+    btnAbrir.classList.add('opening');
+    MusicBubble.startFromUserGesture();
+
+    for (let i = 0; i < 24; i++) {
+        const particle = createOpeningParticle('particle', {
+            minSize: 4, maxSize: 10,
+            minX: -170, maxX: 170,
+            minY: -210, maxY: -86,
+            minDuration: 0.8, maxDuration: 1.4,
+            minDelay: 0.35, maxDelay: 1.05
+        });
+        portada.appendChild(particle);
+        particle.addEventListener('animationend', () => particle.remove(), { once: true });
+    }
+
+    for (let i = 0; i < 18; i++) {
+        const dust = createOpeningParticle('fairy-dust', {
+            minSize: 2, maxSize: 5,
+            minX: -120, maxX: 120,
+            minY: -160, maxY: -58,
+            minDuration: 0.95, maxDuration: 1.55,
+            minDelay: 0.8, maxDelay: 1.45
+        });
+        portada.appendChild(dust);
+        dust.addEventListener('animationend', () => dust.remove(), { once: true });
+    }
+
+    setTimeout(function () {
+        if (typeof window.openPortadaInvitation === 'function') {
+            window.openPortadaInvitation();
+        }
+    }, 2000);
+}
+
 function initPortada() {
     const portada = document.getElementById('portada');
     const btnAbrir = document.getElementById('btn-abrir');
     const envelopeTrigger = document.getElementById('portada-envelope-trigger');
     const invitacion = document.getElementById('invitacion');
-    
+
     if (!portada || !btnAbrir || !invitacion) return;
+
+    initPortadaParticles();
 
     function openInvitation() {
         MusicBubble.startFromUserGesture();
@@ -401,20 +491,28 @@ function initPortada() {
         invitacion.style.visibility = 'visible';
         invitacion.setAttribute('aria-hidden', 'false');
         invitacion.inert = false;
-        
+
         portada.classList.add('abrir');
         invitacion.classList.add('revelar');
-        MensajeFlota.mostrar();
-        
-        setTimeout(function() {
+
+        setTimeout(function () {
             portada.style.display = 'none';
             MusicBubble.reveal();
         }, 1200);
     }
 
-    btnAbrir.addEventListener('click', openInvitation);
+    window.openPortadaInvitation = openInvitation;
+
+    btnAbrir.addEventListener('click', function (e) {
+        e.preventDefault();
+        openEnvelope();
+    });
+
     if (envelopeTrigger) {
-        envelopeTrigger.addEventListener('click', openInvitation);
+        envelopeTrigger.addEventListener('click', function (e) {
+            if (e.target === btnAbrir || btnAbrir.contains(e.target)) return;
+            openEnvelope();
+        });
     }
 }
 
@@ -470,23 +568,32 @@ const MusicBubble = {
         if (!configuredSrc) return;
 
         const source = this.audio.querySelector('source');
-        if (source && source.getAttribute('src') !== configuredSrc) {
+        if (source) {
             source.setAttribute('src', configuredSrc);
-            this.audio.load();
+        } else {
+            const newSource = document.createElement('source');
+            newSource.setAttribute('src', configuredSrc);
+            newSource.setAttribute('type', 'audio/mpeg');
+            this.audio.appendChild(newSource);
         }
+        this.audio.load();
     },
 
     async startFromUserGesture() {
         if (!this.audio || !this.button) return;
 
         try {
-            await this.audio.play();
+            this.audio.currentTime = 0;
+            const playPromise = this.audio.play();
+            if (playPromise !== undefined) {
+                await playPromise;
+            }
             this.isPlaying = true;
             this.syncVisualState(true);
         } catch (error) {
             this.isPlaying = false;
             this.syncVisualState(false);
-            console.warn('No se pudo iniciar la música automáticamente:', error);
+            console.warn('No se pudo iniciar la música:', error);
         }
     },
 
@@ -528,7 +635,7 @@ const MusicBubble = {
 };
 
 function initScrollAnimations() {
-    const elements = document.querySelectorAll('.section, .separator, .footer, .fade-in-element, .zoom-in-element');
+    const elements = document.querySelectorAll('.section, .separator, .footer, .fade-in-element, .zoom-in-element, .timeline-item');
 
     elements.forEach((element, index) => {
         const revealOrder = index % 4;
@@ -627,14 +734,14 @@ function getEventDateFromConfig() {
         const day = Number(parts[0]);
         const monthIndex = Number(parts[1]) - 1;
         const year = Number(parts[2]);
-        const parsedDate = new Date(year, monthIndex, day, 0, 0, 0, 0);
+        const parsedDate = new Date(year + '-' + String(monthIndex + 1).padStart(2, '0') + '-' + String(day).padStart(2, '0') + 'T17:00:00-06:00');
 
         if (!Number.isNaN(parsedDate.getTime())) {
             return parsedDate.getTime();
         }
     }
 
-    return new Date('2026-12-12T00:00:00').getTime();
+    return new Date('2026-11-21T17:00:00-06:00').getTime();
 }
 
 function initRotatingSeparator() {
@@ -730,6 +837,55 @@ function initRSVP() {
     const confirmedIntroText = 'Gracias por haber completado el formulario de asistencia.';
     
     if (!form) return;
+
+    (function() {
+      const btnSi = document.getElementById('rsvp-si');
+      const btnNo = document.getElementById('rsvp-no');
+      const pasesPanel = document.getElementById('rsvp-pases-panel');
+      const paseNumero = document.getElementById('pase-numero');
+      const btnMenos = document.getElementById('pase-menos');
+      const btnMas = document.getElementById('pase-mas');
+      const maxPases = parseInt(document.getElementById('numero-lugares')?.textContent || '1');
+      let pases = 1;
+      let respuesta = null;
+
+      if (!btnSi || !btnNo) return;
+
+      btnSi.addEventListener('click', () => {
+        respuesta = 'si';
+        pases = 1;
+        paseNumero.textContent = pases;
+        document.querySelector('.rsvp-opciones').style.display = 'none';
+        pasesPanel.classList.remove('hidden');
+      });
+
+      btnNo.addEventListener('click', () => {
+        respuesta = 'no';
+        const form = document.getElementById('rsvp-form');
+        const success = document.getElementById('rsvp-success');
+        const msg = document.getElementById('rsvp-final-message');
+        if (form) form.style.display = 'none';
+        if (success) success.style.display = 'block';
+        if (msg) msg.textContent = 'Lamentamos que no puedas acompañarnos. ¡Te llevaremos en el corazón esa noche!';
+      });
+
+      btnMenos.addEventListener('click', () => {
+        if (pases > 1) { pases--; paseNumero.textContent = pases; }
+      });
+
+      btnMas.addEventListener('click', () => {
+        if (pases < maxPases) { pases++; paseNumero.textContent = pases; }
+      });
+
+      const form = document.getElementById('rsvp-form');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          if (respuesta === 'si') {
+            document.getElementById('numero-lugares').textContent = pases;
+          }
+        });
+      }
+    })();
 
     function getOrCreatePopup() {
         let overlay = document.getElementById('rsvp-popup-overlay');
@@ -1097,3 +1253,99 @@ function initGiftModal() {
         }
     });
 }
+
+(function () {
+  const canvas = document.getElementById('fireflies-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  const COUNT = 38;
+  let fireflies = [];
+  let animFrame;
+  let running = false;
+
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  function random(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  function createFirefly() {
+    return {
+      x: random(0, window.innerWidth),
+      y: random(0, window.innerHeight),
+      r: random(0.8, 1.7),
+      alpha: random(0.18, 0.65),
+      alphaDir: Math.random() > 0.5 ? 1 : -1,
+      alphaSpeed: random(0.004, 0.014),
+      speedX: random(-0.22, 0.22),
+      speedY: random(-0.22, 0.22),
+      hue: random(42, 54),
+    };
+  }
+
+  function initFireflies() {
+    fireflies = Array.from({ length: COUNT }, createFirefly);
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    fireflies.forEach(f => {
+      f.alpha += f.alphaSpeed * f.alphaDir;
+      if (f.alpha >= random(0.5, 0.85)) f.alphaDir = -1;
+      if (f.alpha <= 0.05) {
+        f.alphaDir = 1;
+        f.alpha = 0.05;
+      }
+      f.x += f.speedX;
+      f.y += f.speedY;
+      if (f.x < -10) f.x = window.innerWidth + 10;
+      if (f.x > window.innerWidth + 10) f.x = -10;
+      if (f.y < -10) f.y = window.innerHeight + 10;
+      if (f.y > window.innerHeight + 10) f.y = -10;
+
+      ctx.beginPath();
+      ctx.arc(f.x, f.y, f.r, 0, Math.PI * 2);
+      ctx.fillStyle = `hsla(${f.hue}, 100%, 88%, ${f.alpha})`;
+      ctx.fill();
+    });
+
+    animFrame = requestAnimationFrame(draw);
+  }
+
+  function startFireflies() {
+    if (running) return;
+    running = true;
+    resize();
+    initFireflies();
+    draw();
+    canvas.classList.add('visible');
+  }
+
+  function stopFireflies() {
+    running = false;
+    cancelAnimationFrame(animFrame);
+    canvas.classList.remove('visible');
+  }
+
+  window.addEventListener('resize', resize);
+
+  const invitacion = document.getElementById('invitacion');
+  if (invitacion) {
+    const observer = new MutationObserver(() => {
+      if (invitacion.classList.contains('revelar')) {
+        startFireflies();
+      } else {
+        stopFireflies();
+      }
+    });
+    observer.observe(invitacion, { attributes: true, attributeFilter: ['class'] });
+
+    if (invitacion.classList.contains('revelar')) {
+      startFireflies();
+    }
+  }
+})();

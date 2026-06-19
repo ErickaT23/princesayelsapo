@@ -6,21 +6,22 @@
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
-  <title>XV Anika Fernanda</title>
-  <meta name="description" content="Celebra conmigo mis XV, te esperamos.">
-
-  <!-- Open Graph (WhatsApp, Facebook) -->
-  <meta property="og:title" content="XV Anika Fernanda">
-  <meta property="og:description" content="Celebra conmigo mis XV, te esperamos.">
-  <meta property="og:image" content="https://images.pexels.com/photos/29903645/pexels-photo-29903645.jpeg">
-  <meta property="og:url" content="">
+  <title>María Emilia | Mis XV 2026</title>
+  <meta name="description" content="Mis Quince Años de María Emilia — Sábado 21 de Noviembre, 2026. Acompáñame a vivir una noche mágica.">
+  <meta name="author" content="Two Design">
+  <meta name="theme-color" content="#0d2416">
+  <meta property="og:title" content="María Emilia | Mis XV 2026">
+  <meta property="og:description" content="Mis Quince Años de María Emilia — Sábado 21 de Noviembre, 2026. Acompáñame a vivir una noche mágica.">
+  <meta property="og:image" content="https://i.postimg.cc/NLqwbBcN/XVPS.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://princesayelsapo.thetwodesign.com">
   <meta property="og:type" content="website">
-
-  <!-- Twitter/X -->
+  <meta property="og:locale" content="es_GT">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="XV Anika Fernanda">
-  <meta name="twitter:description" content="Celebra conmigo mis XV, te esperamos.">
-  <meta name="twitter:image" content="https://images.pexels.com/photos/37594085/pexels-photo-37594085.jpeg">
+  <meta name="twitter:title" content="María Emilia | Mis XV 2026">
+  <meta name="twitter:description" content="Mis Quince Años de María Emilia — Sábado 21 de Noviembre, 2026.">
+  <meta name="twitter:image" content="https://i.postimg.cc/NLqwbBcN/XVPS.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,210 +31,468 @@
 </head>
 <body class="portada-lock">
   <section id="portada" class="portada" aria-label="Portada">
-    <div class="portada-fondo"></div>
+    <div class="portada-fondo">
+      <video class="portada-video" src="VIDEOPORTADA.mp4" muted loop playsinline preload="auto" aria-hidden="true"></video>
+    </div>
     <div id="portada-envelope-trigger" class="portada-contenido" role="presentation">
       <div class="portada-center">
-        <h1 class="portada-main-name portada-nombre">
-          <span>Anika</span>
-          <span>Fernanda</span>
-        </h1>
-        <button id="btn-abrir" type="button">Abrir invitación</button>
+        <h1 class="portada-main-name portada-nombre">Maria Emilia</h1>
+        <button id="btn-abrir" type="button" aria-label="Toca para abrir tu invitación">
+          <span class="portada-open-copy">Toca para abrir tu invitación</span>
+        </button>
       </div>
     </div>
   </section>
 
   <div id="invitacion" class="invitacion-shell" aria-live="polite">
-    <aside id="side-menu" class="side-menu section" aria-label="Navegación">
-      <nav>
-        <ul>
-          <li><a href="#hero">Inicio</a></li>
-          <li><a href="#frase">Frase</a></li>
-          <li><a href="#rsvp-section">RSVP</a></li>
-          <li><a href="#contador">Cuenta regresiva</a></li>
-          <li><a href="#padres">Padres</a></li>
-          <li><a href="#itinerario">Itinerario</a></li>
-          <li><a href="#eventos">Evento</a></li>
-          <li><a href="#dresscode">Dress code</a></li>
-          <li><a href="#regalos">Regalos</a></li>
-          <li><a href="#galeria">Galería</a></li>
-          <li><a href="#fotos">Sube fotos</a></li>
-          <li><a href="#deseos">Buenos deseos</a></li>
-        </ul>
-      </nav>
-    </aside>
-
+    <canvas id="fireflies-canvas"></canvas>
     <main class="main-content">
-      <section id="hero" class="section hero zoom-in-element">
-        <div class="hero-overlay"></div>
-        <img class="hero-image" src="images/fotos/V2.jpg" alt="Anika Fernanda" data-parallax data-parallax-speed="0.045" data-parallax-max="28">
-        <div class="hero-content fade-in-element">
-          <h2 class="hero-title zoom-in-element">Anika Fernanda</h2>
+      <section id="hero" class="section hero fade-in-element">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+          <img class="hero-corona" src="images/CORONA.png" alt="Corona decorativa">
+          <div class="hero-titles">
+            <div class="hero-titles-text">
+              <p class="hero-mis-quince">Mis Quince</p>
+              <h2 class="hero-nombre">María Emilia</h2>
+              <img class="hero-separador" src="images/SEPARADOR.png" alt="" aria-hidden="true">
+            </div>
+          </div>
+          <p class="hero-frase">Como Tiana, he aprendido que los sueños se hacen realidad con amor, esfuerzo y magia en el corazón. Hoy, comienza mi propio cuento, y tú eres parte de él.<br><br>Acompáñame a vivir una noche mágica que jamás olvidaré.</p>
         </div>
-        <a id="scroll-hint" href="#frase" aria-label="Deslizar hacia abajo">Desliza hacia abajo</a>
       </section>
 
-      <section id="frase" class="section frase fade-in-element">
-        <div class="frase-content">
-          <img class="frase-corona" src="images/CORONA.png" alt="Corona decorativa">
-          <p>¡Llegó el momento de celebrar! Te espero para compartir una noche llena de magia, música y alegría por mis 15 años.</p>
-        </div>
-      </section>
-
-      <section id="separador-sobre" class="section separador-sobre fade-in-element" aria-label="Separador">
-        <img src="images/SOBRE.png" alt="Sobre decorativo" data-parallax data-parallax-speed="0.028" data-parallax-max="16">
-      </section>
-
-      <section id="rsvp-section" class="section rsvp slide-left fade-in-element">
-        <div class="section-head">
-          <h3>¡Es un placer invitarte!</h3>
-        </div>
-        <div class="rsvp-card">
-          <p id="nombre-invitado" class="invitado-nombre">Invitado Especial</p>
-          <p class="invitado-mensaje">Eres muy especial para nosotros</p>
-          <h4 class="invitado-lugares">Hemos reservado para ti <span id="numero-lugares">2</span> lugares especiales.</h4>
-
-          <p class="rsvp-intro">Confirma tu asistencia para brindarte una experiencia inolvidable.</p>
-          <form id="rsvp-form" novalidate>
-            <input id="rsvp-name" type="hidden" name="rsvp-name">
-            <button id="rsvp-submit" type="submit">Confirmar asistencia</button>
-          </form>
-
-          <div id="rsvp-success" style="display:none;">
-            <p id="rsvp-final-message"></p>
+      <section id="padres" class="section padres fade-in-element">
+        <img class="padres-flor" src="images/FLORL.png" alt="Flor decorativa">
+        <p class="padres-bendicion">Con la bendición de Dios, mis padres y amados padrinos</p>
+        <div class="padres-grid">
+          <div class="padres-card">
+            <h4 class="padres-label">Mis Padres</h4>
+            <p class="padres-nombre">Marco Antonio Sánchez</p>
+            <p class="padres-nombre">Ana María de Sánchez</p>
+          </div>
+          <div class="padres-card">
+            <h4 class="padres-label">Mis Padrinos</h4>
+            <p class="padres-nombre">Victor Manuel Pérez</p>
+            <p class="padres-nombre">María Elena de Pérez</p>
           </div>
         </div>
       </section>
 
-      <section id="contador" class="section countdown zoom-in-element">
-        <div class="countdown-inner">
-          <h3>12 de diciembre, 2026</h3>
-          <div class="count-grid">
-            <div><span id="days">00</span><small>Días</small></div>
-            <div><span id="hours">00</span><small>Horas</small></div>
-            <div><span id="minutes">00</span><small>Minutos</small></div>
-            <div><span id="seconds">00</span><small>Segundos</small></div>
+      <section id="contador" class="section countdown fade-in-element">
+        <h2 class="countdown-titulo">¡Solo faltan!</h2>
+        <div class="count-grid">
+          <div class="count-unit">
+            <div class="count-lotus">
+              <svg class="lotus-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="lotusGold" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#fff6c9"/>
+                    <stop offset="40%" style="stop-color:#e8d5a3"/>
+                    <stop offset="70%" style="stop-color:#c9a84c"/>
+                    <stop offset="100%" style="stop-color:#a97724"/>
+                  </linearGradient>
+                </defs>
+                <!-- Pétalos exteriores -->
+                <ellipse cx="40" cy="52" rx="8" ry="18" fill="url(#lotusGold)" opacity="0.5" transform="rotate(-30 40 52)"/>
+                <ellipse cx="40" cy="52" rx="8" ry="18" fill="url(#lotusGold)" opacity="0.5" transform="rotate(30 40 52)"/>
+                <ellipse cx="40" cy="52" rx="8" ry="18" fill="url(#lotusGold)" opacity="0.5" transform="rotate(-60 40 52)"/>
+                <ellipse cx="40" cy="52" rx="8" ry="18" fill="url(#lotusGold)" opacity="0.5" transform="rotate(60 40 52)"/>
+                <!-- Pétalos interiores -->
+                <ellipse cx="40" cy="46" rx="6" ry="14" fill="url(#lotusGold)" opacity="0.8" transform="rotate(-15 40 46)"/>
+                <ellipse cx="40" cy="46" rx="6" ry="14" fill="url(#lotusGold)" opacity="0.8" transform="rotate(15 40 46)"/>
+                <ellipse cx="40" cy="44" rx="5" ry="13" fill="url(#lotusGold)" opacity="0.9"/>
+                <!-- Centro -->
+                <circle cx="40" cy="40" r="10" fill="url(#lotusGold)"/>
+              </svg>
+              <span class="count-number" id="days">00</span>
+            </div>
+            <small class="count-label">Días</small>
           </div>
-          <a class="btn-soft countdown-calendar" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mis%20Quince%20Anika%20Fernanda&dates=20261212T170000/20261213T000000&ctz=America/Guatemala&details=Mis%20Quince%20Anika%20Fernanda%20-%2012%20de%20diciembre%2C%202026" target="_blank" rel="noopener">Agregar al calendario</a>
+          <div class="count-unit">
+            <div class="count-lotus">
+              <svg class="lotus-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="lotusGold2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#fff6c9"/>
+                    <stop offset="40%" style="stop-color:#e8d5a3"/>
+                    <stop offset="70%" style="stop-color:#c9a84c"/>
+                    <stop offset="100%" style="stop-color:#a97724"/>
+                  </linearGradient>
+                </defs>
+                <ellipse cx="40" cy="52" rx="8" ry="18" fill="url(#lotusGold2)" opacity="0.5" transform="rotate(-30 40 52)"/>
+                <ellipse cx="40" cy="52" rx="8" ry="18" fill="url(#lotusGold2)" opacity="0.5" transform="rotate(30 40 52)"/>
+                <ellipse cx="40" cy="52" rx="8" ry="18" fill="url(#lotusGold2)" opacity="0.5" transform="rotate(-60 40 52)"/>
+                <ellipse cx="40" cy="52" rx="8" ry="18" fill="url(#lotusGold2)" opacity="0.5" transform="rotate(60 40 52)"/>
+                <ellipse cx="40" cy="46" rx="6" ry="14" fill="url(#lotusGold2)" opacity="0.8" transform="rotate(-15 40 46)"/>
+                <ellipse cx="40" cy="46" rx="6" ry="14" fill="url(#lotusGold2)" opacity="0.8" transform="rotate(15 40 46)"/>
+                <ellipse cx="40" cy="44" rx="5" ry="13" fill="url(#lotusGold2)" opacity="0.9"/>
+                <circle cx="40" cy="40" r="10" fill="url(#lotusGold2)"/>
+              </svg>
+              <span class="count-number" id="hours">00</span>
+            </div>
+            <small class="count-label">Horas</small>
+          </div>
+          <div class="count-unit">
+            <div class="count-lotus">
+              <svg class="lotus-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="lotusGold3" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#fff6c9"/>
+                    <stop offset="40%" style="stop-color:#e8d5a3"/>
+                    <stop offset="70%" style="stop-color:#c9a84c"/>
+                    <stop offset="100%" style="stop-color:#a97724"/>
+                  </linearGradient>
+                </defs>
+                <ellipse cx="40" cy="52" rx="8" ry="18" fill="url(#lotusGold3)" opacity="0.5" transform="rotate(-30 40 52)"/>
+                <ellipse cx="40" cy="52" rx="8" ry="18" fill="url(#lotusGold3)" opacity="0.5" transform="rotate(30 40 52)"/>
+                <ellipse cx="40" cy="52" rx="8" ry="18" fill="url(#lotusGold3)" opacity="0.5" transform="rotate(-60 40 52)"/>
+                <ellipse cx="40" cy="52" rx="8" ry="18" fill="url(#lotusGold3)" opacity="0.5" transform="rotate(60 40 52)"/>
+                <ellipse cx="40" cy="46" rx="6" ry="14" fill="url(#lotusGold3)" opacity="0.8" transform="rotate(-15 40 46)"/>
+                <ellipse cx="40" cy="46" rx="6" ry="14" fill="url(#lotusGold3)" opacity="0.8" transform="rotate(15 40 46)"/>
+                <ellipse cx="40" cy="44" rx="5" ry="13" fill="url(#lotusGold3)" opacity="0.9"/>
+                <circle cx="40" cy="40" r="10" fill="url(#lotusGold3)"/>
+              </svg>
+              <span class="count-number" id="minutes">00</span>
+            </div>
+            <small class="count-label">Minutos</small>
+          </div>
+          <div class="count-unit">
+            <div class="count-lotus">
+              <svg class="lotus-svg" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="lotusGold4" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#fff6c9"/>
+                    <stop offset="40%" style="stop-color:#e8d5a3"/>
+                    <stop offset="70%" style="stop-color:#c9a84c"/>
+                    <stop offset="100%" style="stop-color:#a97724"/>
+                  </linearGradient>
+                </defs>
+                <ellipse cx="40" cy="52" rx="8" ry="18" fill="url(#lotusGold4)" opacity="0.5" transform="rotate(-30 40 52)"/>
+                <ellipse cx="40" cy="52" rx="8" ry="18" fill="url(#lotusGold4)" opacity="0.5" transform="rotate(30 40 52)"/>
+                <ellipse cx="40" cy="52" rx="8" ry="18" fill="url(#lotusGold4)" opacity="0.5" transform="rotate(-60 40 52)"/>
+                <ellipse cx="40" cy="52" rx="8" ry="18" fill="url(#lotusGold4)" opacity="0.5" transform="rotate(60 40 52)"/>
+                <ellipse cx="40" cy="46" rx="6" ry="14" fill="url(#lotusGold4)" opacity="0.8" transform="rotate(-15 40 46)"/>
+                <ellipse cx="40" cy="46" rx="6" ry="14" fill="url(#lotusGold4)" opacity="0.8" transform="rotate(15 40 46)"/>
+                <ellipse cx="40" cy="44" rx="5" ry="13" fill="url(#lotusGold4)" opacity="0.9"/>
+                <circle cx="40" cy="40" r="10" fill="url(#lotusGold4)"/>
+              </svg>
+              <span class="count-number" id="seconds">00</span>
+            </div>
+            <small class="count-label">Segundos</small>
+          </div>
         </div>
+        <p class="countdown-fecha">21 &nbsp;|&nbsp; Noviembre &nbsp;|&nbsp; 2026</p>
+        <a class="btn-calendario" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mis%20Quince%20Mar%C3%ADa%20Emilia&dates=20261121T170000/20261122T000000&ctz=America/Guatemala&details=Mis%20Quince%20Mar%C3%ADa%20Emilia%20-%2021%20de%20noviembre%2C%202026" target="_blank" rel="noopener">Agregar al calendario</a>
       </section>
 
-      <section id="agradecimiento" class="section frase fade-in-element">
-        <div class="frase-content">
-          <p>Gracias por ser parte de este momento único.</p>
+      <section id="separador-1" class="section separador-foto fade-in-element" aria-label="Separador">
+        <div class="separador-foto-inner">
+          <img src="images/fotos/1.jpg" alt="Separador decorativo">
         </div>
-      </section>
-
-      <section id="padres" class="section padres slide-right fade-in-element">
-        <div class="padres-content">
-          <p class="padres-intro">Con el amor de Dios y la bendición de mis padres</p>
-          <h3>Abelino Cabrera &amp; Brenda de Cabrera</h3>
-        </div>
-      </section>
-
-      <section id="separador-h1" class="section separador-h1 fade-in-element" aria-label="Separador">
-        <img src="images/fotos/V1.jpg" alt="Separador decorativo" data-parallax data-parallax-speed="0.024" data-parallax-max="14">
       </section>
 
       <section id="itinerario" class="section itinerario fade-in-element">
-        <div class="section-head">
-          <h3>Itinerario</h3>
-        </div>
-        <div class="timeline">
-          <article><img class="timeline-icon" src="images/Iconos/CHURCH.svg" alt="Ceremonia"><p class="timeline-hora">5:00 PM</p><h4>Ceremonia</h4></article>
-          <article><img class="timeline-icon" src="images/Iconos/DINNER.svg" alt="Recepción"><p class="timeline-hora">7:00 PM</p><h4>Recepción</h4></article>
-          <article><img class="timeline-icon" src="images/Iconos/CHEERS.svg" alt="Brindis"><p class="timeline-hora">8:00 PM</p><h4>Brindis</h4></article>
-          <article><img class="timeline-icon" src="images/Iconos/PARTY.svg" alt="Fiesta"><p class="timeline-hora">9:00 PM</p><h4>Fiesta</h4></article>
-        </div>
-      </section>
+        <div class="itinerario-grid">
 
-      <section id="eventos" class="section eventos fade-in-element">
-        <div class="section-head">
-        </div>
-        <div class="events-container">
-          <article class="event-card slide-left">
-            <img class="event-emoji" src="images/Iconos/CHURCH.svg" alt="Ceremonia">
-            <h4 class="event-title"><span class="event-inicial">C</span><span class="event-resto">eremonia</span></h4>
-            <p id="ceremonia-nombre" class="event-lugar">Iglesia Catedral</p>
-            <p id="ceremonia-direccion" class="event-direccion">Quetzaltenango</p>
-            <a class="btn-location event-parallax-btn" href="https://maps.app.goo.gl/UR8YG5dqu9fzo5NeA" target="_blank" rel="noopener">Ubicación</a>
+          <article class="itinerario-card">
+            <img class="itinerario-icono" src="images/Iconos/CHURCH-PS.png" alt="Ceremonia">
+            <h3 class="itinerario-titulo">Ceremonia</h3>
+            <p class="itinerario-lugar">Iglesia de la Merced</p>
+            <p class="itinerario-direccion">1a Calle Poniente, Antigua Guatemala</p>
+            <p class="itinerario-hora">3:00 pm</p>
+            <a class="btn-itinerario" href="https://maps.app.goo.gl/hrXjSXsXWw31h9h89" target="_blank" rel="noopener">Cómo llegar</a>
           </article>
-          <article class="event-card slide-right">
-            <img class="event-emoji" src="images/Iconos/DINNER.svg" alt="Recepción">
-            <h4 class="event-title"><span class="event-inicial">R</span><span class="event-resto">ecepción</span></h4>
-            <p id="recepcion-nombre" class="event-lugar">Restaurante Don Carlos</p>
-            <p id="recepcion-direccion" class="event-direccion">Circunvalación Salcajá</p>
-            <a class="btn-location event-parallax-btn" href="https://maps.app.goo.gl/AHz7RSJHoNs1GPiV7" target="_blank" rel="noopener">Ubicación</a>
-          </article>
-        </div>
-      </section>
 
-      <section id="separador-h1" class="section separador-h1 fade-in-element" aria-label="Separador">
-        <img src="images/fotos/V5.jpg" alt="Separador decorativo" data-parallax data-parallax-speed="0.024" data-parallax-max="14">
-      </section>
-
-      <section id="dresscode" class="section dresscode fade-in-element">
-        <div class="dress-card">
-          <h3 class="dress-title">Código de Vestimenta</h3>
-          <div class="dress-icons" aria-hidden="true">
-            <img class="dress-icon" src="images/Iconos/lady.svg" alt="">
-            <img class="dress-icon" src="images/Iconos/groom.svg" alt="">
+          <div class="itinerario-separador" aria-hidden="true">
+            <svg viewBox="0 0 2 120" xmlns="http://www.w3.org/2000/svg" width="2" height="120">
+              <line x1="1" y1="0" x2="1" y2="120" stroke="rgba(201,168,76,0.35)" stroke-width="1" stroke-dasharray="4 6"/>
+            </svg>
           </div>
-          <p class="dress-copy">Formal y elegante; nos hemos reservado el color champán, no olvides abrigarte bien.</p>
-          <h4 class="dress-subtitle">Inspiración</h4>
-          <a class="btn-soft" href="https://es.pinterest.com/search/pins/?q=Outfits%20para%20invitadas%20e%20invitados%20para%20fiesta&rs=typed" target="_blank" rel="noopener">Ir a Pinterest</a>
+
+          <article class="itinerario-card">
+            <img class="itinerario-icono" src="images/Iconos/CHEERS-PS.png" alt="Recepción">
+            <h3 class="itinerario-titulo">Recepción</h3>
+            <p class="itinerario-lugar">Ruinas de La Recolección</p>
+            <p class="itinerario-direccion">Antigua Guatemala</p>
+            <p class="itinerario-hora">4:30 pm</p>
+            <a class="btn-itinerario" href="https://maps.app.goo.gl/fhFc5bsk6FaM4Zcx8" target="_blank" rel="noopener">Cómo llegar</a>
+          </article>
+
         </div>
       </section>
 
-      <section id="regalos" class="section regalos fade-in-element">
-        <div class="regalos-card">
-          <img class="regalos-icon" src="images/Iconos/GIFTS.svg" alt="Regalos">
-          <h3 class="regalos-title">Lluvia de Sobres</h3>
-          <p class="regalos-copy">Tu presencia es el mejor regalo, pero si deseas tener un detalle, agradezco que sea en efectivo.</p>
+      <section id="separador-2" class="section separador-foto fade-in-element" aria-label="Separador">
+        <div class="separador-foto-inner">
+          <img src="images/fotos/3.jpg" alt="Separador decorativo">
         </div>
       </section>
 
-      <section id="separador-h1" class="section separador-h1 fade-in-element" aria-label="Separador">
-        <img src="images/fotos/V6.jpg" alt="Separador decorativo" data-parallax data-parallax-speed="0.024" data-parallax-max="14">
-      </section>
+      <section id="timeline" class="section timeline-section fade-in-element">
+        <h3 class="timeline-heading">Itinerario</h3>
+        <div class="timeline-list">
 
-      <section id="fotos" class="section fotos fade-in-element">
-        <div class="fotos-card">
-          <h3 class="fotos-title">¡Hagamos los recuerdos realidad!</h3>
-          <img class="fotos-qr" src="images/QRXV.svg" alt="QR para subir fotos y videos">
-          <p class="fotos-copy">Ayúdanos a inmortalizar este día tan especial, compartiendo con nosotros las fotos y videos que captures. Puedes hacerlo escaneando el QR o subiéndolas en el botón.</p>
-          <a class="btn-soft" href="https://drive.google.com/drive/folders/1dWgSgV3frl_pkQDEcomF9RL3Ts51d8Bb?usp=drive_link" target="_blank" rel="noopener">Subir Fotos</a>
+          <div class="timeline-item timeline-item--left">
+            <div class="timeline-content">
+              <p class="timeline-nombre">Ceremonia</p>
+              <p class="timeline-hora">3:00 pm</p>
+            </div>
+            <div class="timeline-dot">
+              <i class="fa-solid fa-church" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-empty"></div>
+          </div>
+
+          <div class="timeline-item timeline-item--right">
+            <div class="timeline-empty"></div>
+            <div class="timeline-dot">
+              <i class="fa-solid fa-champagne-glasses" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-content">
+              <p class="timeline-nombre">Cocktail</p>
+              <p class="timeline-hora">4:30 pm</p>
+            </div>
+          </div>
+
+          <div class="timeline-item timeline-item--left">
+            <div class="timeline-content">
+              <p class="timeline-nombre">Ingreso de la Quinceañera</p>
+              <p class="timeline-hora">5:00 pm</p>
+            </div>
+            <div class="timeline-dot">
+              <i class="fa-solid fa-crown" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-empty"></div>
+          </div>
+
+          <div class="timeline-item timeline-item--right">
+            <div class="timeline-empty"></div>
+            <div class="timeline-dot">
+              <i class="fa-solid fa-music" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-content">
+              <p class="timeline-nombre">Vals</p>
+              <p class="timeline-hora">5:30 pm</p>
+            </div>
+          </div>
+
+          <div class="timeline-item timeline-item--left">
+            <div class="timeline-content">
+              <p class="timeline-nombre">Brindis</p>
+              <p class="timeline-hora">6:00 pm</p>
+            </div>
+            <div class="timeline-dot">
+              <i class="fa-solid fa-champagne-glasses" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-empty"></div>
+          </div>
+
+          <div class="timeline-item timeline-item--right">
+            <div class="timeline-empty"></div>
+            <div class="timeline-dot">
+              <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-content">
+              <p class="timeline-nombre">Cena</p>
+              <p class="timeline-hora">6:30 pm</p>
+            </div>
+          </div>
+
+          <div class="timeline-item timeline-item--left">
+            <div class="timeline-content">
+              <p class="timeline-nombre">Fiesta</p>
+              <p class="timeline-hora">7:30 pm</p>
+            </div>
+            <div class="timeline-dot">
+              <i class="fa-solid fa-martini-glass-citrus" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-empty"></div>
+          </div>
+
+          <div class="timeline-item timeline-item--right">
+            <div class="timeline-empty"></div>
+            <div class="timeline-dot">
+              <i class="fa-solid fa-music" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-content">
+              <p class="timeline-nombre">Baile Sorpresa</p>
+              <p class="timeline-hora">9:30 pm</p>
+            </div>
+          </div>
+
+          <div class="timeline-item timeline-item--left">
+            <div class="timeline-content">
+              <p class="timeline-nombre">Fuegos Artificiales</p>
+              <p class="timeline-hora">10:00 pm</p>
+            </div>
+            <div class="timeline-dot">
+              <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-empty"></div>
+          </div>
+
+          <div class="timeline-item timeline-item--right">
+            <div class="timeline-empty"></div>
+            <div class="timeline-dot">
+              <i class="fa-solid fa-gift" aria-hidden="true"></i>
+            </div>
+            <div class="timeline-content">
+              <p class="timeline-nombre">Despedida</p>
+              <p class="timeline-hora">11:00 pm</p>
+            </div>
+          </div>
+
         </div>
       </section>
 
-      <section id="deseos" class="section deseos fade-in-element">
-        <div class="regalos-card deseos-card">
-          <h3 class="regalos-title">Buenos deseos</h3>
-          <p class="regalos-copy">Déjanos un mensaje especial para recordar este día contigo.</p>
+      <section id="separador-3" class="section separador-foto fade-in-element" aria-label="Separador">
+        <div class="separador-foto-inner">
+          <img src="images/fotos/4.jpg" alt="Separador decorativo">
+        </div>
+      </section>
+
+      <section id="dresscode" class="section dresscode-section fade-in-element">
+        <div class="info-card">
+          <img class="info-card-icono" src="images/Iconos/DC-PS.png" alt="Código de vestimenta">
+          <h3 class="info-card-titulo">Código de Vestimenta</h3>
+          <p class="info-card-texto">Traje formal y de gala. Venimos a celebrar a nuestra amada princesa María Emilia. Nos reservamos el color verde únicamente para ella.</p>
+          <a class="btn-itinerario" href="https://es.pinterest.com/search/pins/?q=Outfits%20para%20invitados%20fiesta%20formal&rs=typed" target="_blank" rel="noopener">Inspiración en Pinterest</a>
+        </div>
+      </section>
+
+      <section id="regalos" class="section regalos-section fade-in-element">
+        <div class="info-card">
+          <img class="info-card-icono" src="images/Iconos/GIFT-PS.png" alt="Regalo">
+          <h3 class="info-card-titulo">Regalo</h3>
+          <p class="info-card-texto">Tu presencia es nuestro mejor regalo, pero si deseas tener un detalle conmigo, mi deseo es una lluvia de sobres — lo apreciaré muchísimo.</p>
+        </div>
+      </section>
+
+      <section id="separador-4" class="section separador-foto fade-in-element" aria-label="Separador">
+        <div class="separador-foto-inner">
+          <img src="images/fotos/5.jpg" alt="Separador decorativo">
+        </div>
+      </section>
+
+      <section id="playlist" class="section playlist-section fade-in-element">
+        <div class="info-card">
+          <img class="info-card-icono" src="images/Iconos/PLAYLIST-PS.png" alt="Playlist">
+          <h3 class="info-card-titulo">Playlist</h3>
+          <p class="info-card-texto">Preparamos una playlist especial para acompañar esta noche mágica. ¡Escúchala antes y llega lista para bailar!</p>
+          <a class="btn-itinerario" href="https://open.spotify.com/playlist/00HFgtaSKK0INOAw79RrpG?si=79eec81ee40e4c90&pt=1556e08ac68a4bd30786d73c0083e032" target="_blank" rel="noopener">Abrir en Spotify</a>
+          <span class="info-card-corner-tr"></span>
+          <span class="info-card-corner-bl"></span>
+        </div>
+      </section>
+
+      <section id="deseos" class="section deseos-section fade-in-element">
+        <div class="info-card deseos-card">
+          <img class="info-card-icono" src="images/Iconos/BD-PS.png" alt="Buenos deseos">
+          <h3 class="info-card-titulo">Buenos Deseos</h3>
+          <p class="info-card-texto">Déjame un mensaje especial para recordar este día tan único contigo.</p>
 
           <div class="deseos-actions">
-            <button class="btn-soft" type="button" onclick="toggleWishForm()">Dejar mi deseo</button>
-            <button class="btn-soft" type="button" onclick="toggleWishes()">Ver mensajes</button>
+            <button class="btn-itinerario" type="button" onclick="toggleWishForm()">Dejar mi deseo</button>
+            <button class="btn-itinerario" type="button" onclick="toggleWishes()">Ver mensajes</button>
           </div>
 
-          <div id="wish-form-panel" class="deseos-form-panel hidden" aria-label="Formulario de buenos deseos">
+          <div id="wish-form-panel" class="deseos-form-panel hidden">
             <form id="wish-form" class="deseos-form" onsubmit="return submitWish(event)">
               <input id="wish-name" type="text" maxlength="60" placeholder="Tu nombre" required>
               <textarea id="wish-message" rows="4" maxlength="280" placeholder="Escribe tu deseo" required></textarea>
-              <button class="btn-soft" type="submit">Enviar deseo</button>
+              <button class="btn-itinerario" type="submit">Enviar deseo</button>
             </form>
           </div>
 
           <p id="wish-status" class="deseos-status" aria-live="polite"></p>
           <div id="wishes" class="deseos-list" aria-live="polite"></div>
+
+          <span class="info-card-corner-tr"></span>
+          <span class="info-card-corner-bl"></span>
         </div>
       </section>
 
-      <section id="separador-v2" class="section separador-v2 fade-in-element" aria-label="Separador">
-        <img id="separador-v2-rotativo" src="images/fotos/V7.jpg" alt="Separador decorativo" data-parallax data-parallax-speed="0.024" data-parallax-max="14">
+      <section id="separador-5" class="section separador-foto fade-in-element" aria-label="Separador">
+        <div class="separador-foto-inner">
+          <img src="images/fotos/8.jpg" alt="Separador decorativo">
+        </div>
       </section>
 
-      <section class="section frase-final zoom-in-element">
-          <p class="frase-final-title">Tu presencia es el mejor regalo. Nos sentimos bendecidos de compartir este día tan especial contigo.</p>
+      <section id="album" class="section album-section fade-in-element">
+        <div class="info-card album-card">
+          <h3 class="info-card-titulo">¡Hagamos los recuerdos realidad!</h3>
+          <p class="info-card-texto">Sube las fotos de la fiesta y hagamos que duren para siempre.</p>
+          <img class="album-qr" src="images/QRXV.png" alt="QR para subir fotos">
+          <a class="btn-itinerario" href="https://drive.google.com/drive/folders/1kXKFZzxrvGRGzqnAlTaCZHUx6oxBak82?usp=drive_link" target="_blank" rel="noopener">Subir fotos</a>
+          <span class="info-card-corner-tr"></span>
+          <span class="info-card-corner-bl"></span>
+        </div>
+      </section>
+
+      <section id="rsvp-section" class="section rsvp-section fade-in-element">
+        <div class="info-card rsvp-card">
+          <img class="info-card-icono" src="images/Iconos/RSVP-PS.png" alt="RSVP">
+          <h3 class="info-card-titulo">Confirmación de Asistencia</h3>
+          <p class="info-card-texto">Tu lugar ya está reservado. Confírmanos si podremos contar contigo para preparar cada detalle de esta noche especial.</p>
+
+          <div class="rsvp-invitado-info">
+            <p id="nombre-invitado" class="rsvp-nombre-invitado">Invitado Especial</p>
+            <p class="rsvp-lugares-texto">Hemos reservado para ti <span id="numero-lugares">2</span> lugares especiales.</p>
+          </div>
+
+          <form id="rsvp-form" novalidate>
+            <input id="rsvp-name" type="hidden" name="rsvp-name" value="Invitado Especial" readonly>
+
+            <div class="rsvp-opciones">
+              <button class="btn-rsvp-opcion" type="button" id="rsvp-si">
+                ✦ Sí, con mucho gusto
+              </button>
+              <button class="btn-rsvp-opcion btn-rsvp-opcion--no" type="button" id="rsvp-no">
+                Lamentablemente no podré
+              </button>
+            </div>
+
+            <div id="rsvp-pases-panel" class="rsvp-pases-panel hidden">
+              <p class="rsvp-pases-label">¿Cuántos asistirán?</p>
+              <div class="rsvp-pases-counter">
+                <button class="btn-pase" type="button" id="pase-menos">−</button>
+                <span id="pase-numero">1</span>
+                <button class="btn-pase" type="button" id="pase-mas">+</button>
+              </div>
+              <button id="rsvp-submit" class="btn-itinerario" type="submit">Confirmar asistencia</button>
+            </div>
+          </form>
+
+          <div id="rsvp-success" style="display:none;">
+            <p id="rsvp-final-message" class="deseos-status"></p>
+          </div>
+
+          <span class="info-card-corner-tr"></span>
+          <span class="info-card-corner-bl"></span>
+        </div>
+      </section>
+
+      <section id="frase-final" class="section frase-final-section fade-in-element">
+        <div class="frase-final-content">
+          <img class="frase-final-flor" src="images/FLORL.png" alt="Flor decorativa">
+          <p class="frase-final-texto">"Esta noche, como en todo cuento de hadas, la magia comienza cuando estamos juntos. Gracias por ser parte de mi historia."</p>
+          <img class="frase-final-flor frase-final-flor--bottom" src="images/FLORL.png" alt="Flor decorativa">
+        </div>
+      </section>
+
+      <section id="gallery-auto" class="section gallery-auto-section fade-in-element" aria-label="Galería">
+        <div class="gallery-auto-slider" aria-label="Galería de fotos">
+          <div class="gallery-auto-slide is-active" data-index="0"><img src="images/fotos/1.jpg" alt="Foto 1" loading="lazy"></div>
+          <div class="gallery-auto-slide" data-index="1"><img src="images/fotos/2.jpg" alt="Foto 2" loading="lazy"></div>
+          <div class="gallery-auto-slide" data-index="2"><img src="images/fotos/3.jpg" alt="Foto 3" loading="lazy"></div>
+          <div class="gallery-auto-slide" data-index="3"><img src="images/fotos/4.jpg" alt="Foto 4" loading="lazy"></div>
+          <div class="gallery-auto-slide" data-index="4"><img src="images/fotos/5.jpg" alt="Foto 5" loading="lazy"></div>
+          <div class="gallery-auto-slide" data-index="5"><img src="images/fotos/6.jpg" alt="Foto 6" loading="lazy"></div>
+          <div class="gallery-auto-slide" data-index="6"><img src="images/fotos/7.jpg" alt="Foto 7" loading="lazy"></div>
+          <div class="gallery-auto-slide" data-index="7"><img src="images/fotos/8.jpg" alt="Foto 8" loading="lazy"></div>
+          <div class="gallery-auto-slide" data-index="8"><img src="images/fotos/9.jpg" alt="Foto 9" loading="lazy"></div>
+          <div class="gallery-auto-slide" data-index="9"><img src="images/fotos/10.jpg" alt="Foto 10" loading="lazy"></div>
+        </div>
       </section>
     </main>
 
